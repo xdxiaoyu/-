@@ -8,12 +8,12 @@ var pool=require("./pool");
 
 
 // 用cors解决跨域问题
-var app=express();
-app.use(cors({
-    origin:["http://127.0.0.1:8080","http://localhost:8081"],
-    credentials:true
-}))
-var server=app.listen(3000)
+// var app=express();
+// app.use(cors({
+//     origin:["http://127.0.0.1:8080","http://localhost:8081"],
+//     credentials:true
+// }))
+var server=app.listen(5050)
 // 使用body中间件
 app.use(bodyParser.urlencoded({extended:false}));
 // 托管静态资源
