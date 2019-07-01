@@ -32,7 +32,7 @@
 			<!--div让列表居中显示-->
 			<div>
 				<ul id="header_header_ul1">
-					<li @mouseenter="enter(0)" @mouseleave="leave(0)">
+					<li @mouseenter="enter(0)" @mouseleave="leave(0)" @click="tiaozhuan()">
                         <a href="javascript:;">首页</a>
                         <!--让header_header_ul1下的li结构相同-->
                         <ul></ul>
@@ -143,6 +143,10 @@ export default {
 		},
 		secpage(){
 			this.$router.push("SecondPage1")
+		},
+		tiaozhuan(){
+			this.$router.push("/index")
+			
 		}
     },
 }
@@ -252,7 +256,7 @@ ul{
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	background: url(http://127.0.0.1:3000/img/header/bg1.jpg);
+	background: url(http://dingxingxing.applinzi.com/img/header/bg1.jpg);
 }
 /*设置#header_header下两个ul定高，并借助弹性布局使li水平排布*/
 #header_header>div>ul{
